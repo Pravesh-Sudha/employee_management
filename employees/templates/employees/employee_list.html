@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pravesh Sudha's Employee Management Table</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .navbar { background-color: #007bff; color: white; padding: 15px; font-size: 24px; font-weight: bold; }
+        table { width: 60%; margin: auto; border-collapse: collapse; margin-top: 20px; background: white; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        th, td { padding: 15px; border: 1px solid black; text-align: center; }
+        .btn { padding: 10px 20px; margin: 5px; text-decoration: none; color: white; border-radius: 5px; display: inline-block; font-size: 14px; }
+        .btn-add { background-color: #28a745; }
+        .btn-danger { background-color: #dc3545; }
+        .bottom-container { position: fixed; bottom: 20px; width: 100%; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="navbar">Pravesh Sudha's Employee Management Table</div>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Job Title</th>
+            <th>Actions</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.job_title }}</td>
+            <td>
+                <a class="btn btn-danger" href="/delete/{{ employee.id }}/">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <!-- Add Employee button centered at the bottom -->
+    <div class="bottom-container">
+        <a class="btn btn-add" href="/add/">➕ Add Employee</a>
+    </div>
+</body>
+</html>
