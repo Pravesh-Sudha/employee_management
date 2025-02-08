@@ -20,8 +20,8 @@ This is a **Django-based Employee Management System** that provides **CRUD opera
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/yourusername/django-employee-management.git
-cd django-employee-management
+git clone https://github.com/Pravesh-Sudha/employee_management.git
+cd employee_management
 ```
 
 ### 2. Set Up a Virtual Environment
